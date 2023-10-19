@@ -13,15 +13,15 @@ function countBatteriesByHealth(presentCapacities) {
 
         // Classify the battery based on SoH
         if (soh > 80) {
-            healthyCount++;
+            healthy++;
         } else if (soh >= 63 && soh <= 80) {
-            exchangeCount++;
+            exchange++;
         } else {
-            failedCount++;
+            failed++;
         }
     }
 
-    return [healthyCount, exchangeCount, failedCount];
+    return [healthy, exchange, failed];
 }
 
 
